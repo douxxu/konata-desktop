@@ -19,11 +19,11 @@
     "keywords": ["konata", "dance", "desktop", "konata-dancing", "linux", "macos"],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/douxxu/DouAl.git"
+        "url": "git+https://github.com/douxxu/konata-desktop.git"
     },
   "bugs": {
-        "url": "https://github.com/douxxu/DouAl/issues"
+        "url": "https://github.com/douxxu/konata-desktop/issues"
     },
-    "homepage": "https://github.com/douxxu/DouAl"
+    "homepage": "https://github.com/douxxu/konata-desktop"
   }
   
