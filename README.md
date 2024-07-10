@@ -18,8 +18,16 @@ To start Konata Desktop, use the following command:
 ```bash
 konata-desktop
 ```
+or 
+```bash
+kond
+```
 
-
+**WARNING**: If when one of these commands are used, it says "electron: command not found" please run 
+```bash
+npm install -g electron
+```
+  
 
 ## Dependencies
 
