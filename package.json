@@ -1,14 +1,14 @@
 {
     "name": "konata-desktop",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A simple konata dancer for linux and macos desktops ! Use at your own risk !",
     "main": "./src/konata-desktop.js",
     "scripts": {
       "start": "node ./src/start.js"
     },
     "bin": {
-        "konata-desktop": "node ./src/start.js",
-        "kond": "node ./src/start.js"
+        "konata-desktop": "./src/start.js",
+        "kond": "./src/start.js"
     },
     "author": "douxxu",
     "license": "MIT",
