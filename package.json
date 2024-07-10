@@ -4,10 +4,11 @@
     "description": "A simple konata dancer for linux and macos desktops ! Use at your own risk !",
     "main": "./src/konata-desktop.js",
     "scripts": {
-      "start": "electron ."
+      "start": "electron ./src/konata-desktop.js"
     },
     "bin": {
-        "konata-desktop": "electron ./src/konata-desktop.js"
+        "konata-desktop": "electron ./src/konata-desktop.js",
+        "kond": "electron ./src/konata-desktop.js"
     },
     "author": "douxxu",
     "license": "MIT",
