@@ -1,7 +1,7 @@
 const { spawn } = require('child_process');
 const path = require('path');
 
-const mainScriptPath = path.join(__dirname, 'main.js');
+const mainScriptPath = path.join(__dirname, 'konata-desktop.js');
 
 const electronProcess = spawn('electron', [mainScriptPath]);
 
