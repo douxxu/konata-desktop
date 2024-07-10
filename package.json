@@ -1,6 +1,6 @@
 {
     "name": "konata-desktop",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simple konata dancer for linux and macos desktops ! Use at your own risk !",
     "main": "./src/konata-desktop.js",
     "scripts": {
@@ -15,6 +15,14 @@
       "axios": "*",
       "electron": "*"
     },
-    "keywords": ["konata", "dance", "desktop", "konata-dancing", "linux", "macos"]
+    "keywords": ["konata", "dance", "desktop", "konata-dancing", "linux", "macos"],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/douxxu/DouAl.git"
+    },
+  "bugs": {
+        "url": "https://github.com/douxxu/DouAl/issues"
+    },
+    "homepage": "https://github.com/douxxu/DouAl",
   }
   
