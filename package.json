@@ -1,6 +1,6 @@
 {
     "name": "konata-desktop",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "A simple konata dancer for linux and macos desktops ! Use at your own risk !",
     "main": "./src/konata-desktop.js",
     "scripts": {
