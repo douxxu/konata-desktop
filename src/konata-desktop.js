@@ -8,7 +8,7 @@ console.log('|Github: @douxxu ~                           |');
 console.log('|Discord: @douxx.xyz ~                       |');
 console.log('|Tiktok: @douxxpi ~                          |');
 console.log('|============================================|');
-console.log('\x1b[90m|#Konata-desktop ~                   |');
+console.log('|#Konata-desktop ~                           |');
 console.log('|Github: github.com/douxxxu/konata-desktop ~ |');
 console.log('|Npmjs: npmjs.org/package/konata-desktop ~   |');
 console.log('|(too many "~"? I just want to be cute ok ?  |');
@@ -160,10 +160,6 @@ app.on('ready', () => {
       console.error('\x1b[31m%s\x1b[0m', 'Error while getting the gif:', error); 
     });
 });
-
-
-//removed a lil freaky virus right here
-
 
 process.on('uncaughtException', (err) => {
   console.error('\x1b[31m%s\x1b[0m', 'Error:', err); 
