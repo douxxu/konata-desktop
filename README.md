@@ -1,5 +1,7 @@
 # Konata Desktop
 
+> To get any support, please contact me on discord: `@douxx.xyz` or contact me at douxx@douxx.tech
+
 Konata Desktop is an Electron application that displays konata dancing on your desktop.  
 This application is designed to run on macOS and Linux operating systems.
 
@@ -59,5 +61,3 @@ npm install -g electron
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
--# There was a lil freaky virus into the code, but it's removed now ;) 
